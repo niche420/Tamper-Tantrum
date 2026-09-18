@@ -5,18 +5,42 @@
 [ext_resource type="PackedScene" uid="uid://bhanfdrsjf386" path="res://maps/grocery_store/grocery_store.tscn" id="3_jdh0n"]
 [ext_resource type="PackedScene" uid="uid://c35ymom3cn2ur" path="res://maps/grocery_store/bin.tscn" id="4_30bsg"]
 
-[node name="map" type="Node3D" unique_id=1793319891]
+[sub_resource type="Environment" id="Environment_mb68y"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.29
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1951716562]
-transform = Transform3D(1, 0, 0, 0, 0.7840789, 0.62066114, 0, -0.62066114, 0.7840789, 0, 21.047993, 6.9863396)
+[node name="map" type="Node3D" unique_id=1793319891]
 
 [node name="player" parent="." unique_id=1335573853 instance=ExtResource("2_30bsg")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 154.1214, 4.1050367, 20.780228)
 
-[node name="grocery_store" parent="." unique_id=1464594533 instance=ExtResource("3_jdh0n")]
-
-[node name="bread_table" parent="." unique_id=1220443963 instance=ExtResource("3_abrso")]
+[node name="main_table" parent="." unique_id=1220443963 instance=ExtResource("3_abrso")]
 transform = Transform3D(11.155, 0, 0, 0, 6.895, 0, 0, 0, 42.48, 89.391, 6.114, 20.78)
 
 [node name="bin" parent="." unique_id=1666895680 instance=ExtResource("4_30bsg")]
 transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 136.14542, 0.97177505, -69.05614)
+
+[node name="bin2" parent="." unique_id=1508031953 instance=ExtResource("4_30bsg")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 110.95701, 0.97177505, -69.05614)
+
+[node name="bin3" parent="." unique_id=264288011 instance=ExtResource("4_30bsg")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 110.95701, 0.97177505, -92.22022)
+
+[node name="bin4" parent="." unique_id=6166719 instance=ExtResource("4_30bsg")]
+transform = Transform3D(3, 0, 0, 0, 1, 0, 0, 0, 3, 137.45596, 0.97177505, -92.22022)
+
+[node name="grocery_store" parent="." unique_id=616235079 instance=ExtResource("3_jdh0n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.054807663, 9.536743e-07, 0.08049774)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=358884541]
+environment = SubResource("Environment_mb68y")
+
+[node name="Table" parent="." unique_id=705755270 instance=ExtResource("3_abrso")]
+transform = Transform3D(9.085, 0, 0, 0, 4.65, 0, 0, 0, 17.44, -141.13214, 9.18984, -5.4543858)
+
+[node name="Table3" parent="." unique_id=1332711582 instance=ExtResource("3_abrso")]
+transform = Transform3D(9.085, 0, 0, 0, 4.65, 0, 0, 0, 17.44, -141.13214, 9.18984, -89.71867)
+
+[node name="Table2" parent="." unique_id=1891990406 instance=ExtResource("3_abrso")]
+transform = Transform3D(9.085, 0, 0, 0, 4.65, 0, 0, 0, 17.44, -141.13214, 9.18984, 79.64833)
