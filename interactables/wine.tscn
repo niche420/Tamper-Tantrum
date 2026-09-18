@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cwixwwr3n6m4d"]
+
+[ext_resource type="Texture2D" uid="uid://c716ndloopoti" path="res://interactables/wine.png" id="1_dfshg"]
+[ext_resource type="Script" uid="uid://c8xw5ajevbnmq" path="res://interactables/wine.gd" id="1_jla55"]
+[ext_resource type="Texture2D" uid="uid://dtuvhavwduhsv" path="res://interactables/wine_broken.png" id="2_7xcxu"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mb68y"]
+
+[node name="Wine" type="Node3D" unique_id=661951530]
+script = ExtResource("1_jla55")
+prompt_text = "break wine"
+list_item_name = "wine"
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1168780493]
+collision_layer = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1849342099]
+transform = Transform3D(3.255, 0, 0, 0, 3.255, 0, 0, 0, 3.255, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_mb68y")
+
+[node name="BottleSprite" type="Sprite3D" parent="." unique_id=1023444144]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)
+billboard = 1
+alpha_scissor_threshold = 0.497
+texture = ExtResource("1_dfshg")
+
+[node name="BrokenSprite" type="Sprite3D" parent="." unique_id=650791083]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)
+visible = false
+billboard = 1
+alpha_scissor_threshold = 0.497
+texture = ExtResource("2_7xcxu")

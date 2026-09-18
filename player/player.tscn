@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cmnylumthd8kq" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://csjyd4aaariwk" path="res://player/player_cam.gd" id="2_rkbax"]
 [ext_resource type="Script" uid="uid://dqri5cvcid15r" path="res://player/player_interact.gd" id="3_g1dw6"]
+[ext_resource type="PackedScene" uid="uid://dfjn5xlktbmr4" path="res://ui/hud.tscn" id="4_yw30f"]
+[ext_resource type="Script" uid="uid://c4dqgyrkvv3rk" path="res://character/stamina.gd" id="5_qjkh3"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mb68y"]
 
@@ -27,5 +29,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48239446, 0)
 
 [node name="RayCast3D" type="RayCast3D" parent="head" unique_id=1898727256]
 transform = Transform3D(0.9990236, -0.0021387017, 0.0441276, 0.0047196597, 0.99827814, -0.058467265, -0.043926574, 0.058618445, 0.99731356, 0, 0, 0)
-target_position = Vector3(0, 0, -1.5)
+target_position = Vector3(0, 0, -3)
+collision_mask = 2
 script = ExtResource("3_g1dw6")
+
+[node name="HUD" parent="." unique_id=727887040 node_paths=PackedStringArray("ray", "player_stamina") instance=ExtResource("4_yw30f")]
+ray = NodePath("../head/RayCast3D")
+player_stamina = NodePath("../Stamina")
+
+[node name="Stamina" type="Node" parent="." unique_id=606031859]
+unique_name_in_owner = true
+script = ExtResource("5_qjkh3")

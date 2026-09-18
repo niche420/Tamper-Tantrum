@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bkihmttqr4pei"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30bsg"]
+shading_mode = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_mb68y"]
+
+[node name="ceiling_light" type="Node3D" unique_id=475801715]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1146894705]
+transform = Transform3D(20, 0, 0, 0, 0.165, 0, 0, 0, 15, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_30bsg")
+mesh = SubResource("BoxMesh_mb68y")
