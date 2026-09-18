@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cgc5bf4fjq3kd"]
+
+[ext_resource type="Texture2D" uid="uid://b3ftlt2kgu3cv" path="res://maps/grocery_store/sprites/wood.jpg" id="1_dchtb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mb68y"]
+albedo_texture = ExtResource("1_dchtb")
+
+[sub_resource type="BoxMesh" id="BoxMesh_mb68y"]
+
+[node name="Table" type="Node3D" unique_id=1220443963]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=443172084]
+transform = Transform3D(2.5, 0, 0, 0, 0.3, 0, 0, 0, 2.5, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_mb68y")
+mesh = SubResource("BoxMesh_mb68y")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1739687653]
+transform = Transform3D(0.10000005, 0, 0, 0, 9.355001, 0, 0, 0, 0.10000005, -0.36635467, -4.25637, 0.39179927)
+material_override = SubResource("StandardMaterial3D_mb68y")
+mesh = SubResource("BoxMesh_mb68y")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D" unique_id=80430631]
+transform = Transform3D(0.10000005, 0, 0, 0, 9.355001, 0, 0, 0, 0.10000005, 0.38721073, -4.25637, 0.3917993)
+material_override = SubResource("StandardMaterial3D_mb68y")
+mesh = SubResource("BoxMesh_mb68y")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1729738714]
+transform = Transform3D(0.10000005, 0, 0, 0, 9.355001, 0, 0, 0, 0.10000005, -0.33628926, -4.25637, -0.36320782)
+material_override = SubResource("StandardMaterial3D_mb68y")
+mesh = SubResource("BoxMesh_mb68y")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="MeshInstance3D" unique_id=1465837409]
+transform = Transform3D(0.10000005, 0, 0, 0, 9.355001, 0, 0, 0, 0.10000005, 0.3872108, -4.25637, -0.36320776)
+material_override = SubResource("StandardMaterial3D_mb68y")
+mesh = SubResource("BoxMesh_mb68y")
